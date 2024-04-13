@@ -1,5 +1,5 @@
 
-name: ACHIEVE-Service-CICD
+name: Engage-Ui-CICD
 
 on:
   push:
@@ -27,18 +27,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Run chmod on setup.sh
-        run: |
-          if [ -f "$GITHUB_ACTION_PATH/setup.sh" ]; then
-            chmod +x "$GITHUB_ACTION_PATH/setup.sh"
-          fi
+      # - name: Run chmod on setup.sh
+      #   run: |
+      #     if [ -f "$GITHUB_ACTION_PATH/setup.sh" ]; then
+      #       chmod +x "$GITHUB_ACTION_PATH/setup.sh"
+      #     fi
 
    
 
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '2.x' 
+      # - name: Set up Flutter
+      #   uses: subosito/flutter-action@v2
+      #   with:
+      #     flutter-version: '2.x' 
 
       - name: Install dependencies
         run: flutter pub get
