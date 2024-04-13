@@ -27,9 +27,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Run subosito/flutter-action@v2
+      - name: Run chmod on setup.sh
+        run: |
+          if [ -f "$GITHUB_ACTION_PATH/setup.sh" ]; then
+            chmod +x "$GITHUB_ACTION_PATH/setup.sh"
+          fi
         shell: bash
-        run: chmod +x "$GITHUB_ACTION_PATH/setup.sh"
+
    
 
       - name: Set up Flutter
