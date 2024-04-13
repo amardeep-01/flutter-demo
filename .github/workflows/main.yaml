@@ -32,7 +32,6 @@ jobs:
           if [ -f "$GITHUB_ACTION_PATH/setup.sh" ]; then
             chmod +x "$GITHUB_ACTION_PATH/setup.sh"
           fi
-        shell: bash
 
    
 
